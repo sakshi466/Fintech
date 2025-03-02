@@ -1,0 +1,130 @@
+.dashboard-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3a7bd5;
+  box-shadow: 0 4px 15px rgba(58, 123, 213, 0.2);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  color: #3a7bd5;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.funds-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.funds-table thead {
+  background: linear-gradient(to right, #3a7bd5, #3a6073);
+  color: white;
+}
+
+.funds-table th {
+  padding: 18px 15px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.funds-table tr {
+  transition: all 0.3s ease;
+}
+
+.funds-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.funds-table tr:hover {
+  background-color: #e9ecef;
+  transform: scale(1.01);
+}
+
+.funds-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e9ecef;
+  color: #495057;
+ 
+}
+
+.funds-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .funds-table {
+    font-size: 12px;
+    box-shadow: none;
+  }
+
+  .funds-table th,
+  .funds-table td {
+    padding: 10px;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* Scrollbar Styling */
+.funds-table {
+  scrollbar-width: thin;
+  scrollbar-color: #3a7bd5 #e9ecef;
+}
+
+.funds-table::-webkit-scrollbar {
+  width: 8px;
+}
+
+.funds-table::-webkit-scrollbar-track {
+  background: #e9ecef;
+}
+
+.funds-table::-webkit-scrollbar-thumb {
+  background-color: #3a7bd5;
+  border-radius: 20px;
+}
